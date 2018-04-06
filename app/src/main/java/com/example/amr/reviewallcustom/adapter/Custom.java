@@ -31,11 +31,11 @@ public class Custom extends ArrayAdapter<ModelList> {
         convertView = LayoutInflater.from(context).inflate(R.layout.layout_row , parent , false );
         TextView textView1 =  convertView.findViewById(R.id.text1);
         TextView textView2 = convertView.findViewById(R.id.text2);
-        ImageView imageView = convertView.findViewById(R.id.img);
+        TextView imageView = convertView.findViewById(R.id.img);
 
         textView1.setText(modelList.getText1());
         textView2.setText(modelList.getText2());
-        imageView.setImageResource(modelList.getImage());
+        imageView.setText(" "+modelList.getText1().toString().charAt(0)+" ");
 
         return convertView;
     }
