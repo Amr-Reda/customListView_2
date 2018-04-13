@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ReviewAllCustom</string>
+    <string name="delete">delete all</string>
 </resources>

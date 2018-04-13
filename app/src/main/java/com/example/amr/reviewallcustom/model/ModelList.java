@@ -1,11 +1,19 @@
 package com.example.amr.reviewallcustom.model;
 
 public class ModelList {
-    private int image;
+    private int image ,  id;
     private String text1 , text2;
 
     public int getImage() {
         return image;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setImage(int image) {

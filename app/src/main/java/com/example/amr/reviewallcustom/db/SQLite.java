@@ -56,6 +56,7 @@ public class SQLite extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             do{
                modelList = new ModelList();
+               modelList.setId(cursor.getInt(0));
                modelList.setText1(cursor.getString(1));
                modelList.setText2(cursor.getString(2));
                arrayList.add(modelList);
@@ -66,5 +67,15 @@ public class SQLite extends SQLiteOpenHelper {
 
     }
 
+
+    public void deleteBook(int idBook){
+        SQLiteDatabase sqLiteDatabase =getWritableDatabase();
+        sqLiteDatabase.delete("books" , "id =?" ,new String[]{String.valueOf(idBook)});
+    }
+
+    public void deleteAll(){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        sqLiteDatabase.execSQL("delete from  books");
+    }
 
 }
